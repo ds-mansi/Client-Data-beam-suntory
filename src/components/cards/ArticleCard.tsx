@@ -3,7 +3,7 @@ import { CardComponent, CardProps } from "@yext/search-ui-react";
 import RtfConverter from "@yext/rtf-converter";
 import Ce_blogs from "../../types/blogs";
 
-const BlogCard: CardComponent<Ce_blogs> = ({
+const ArticleCard: CardComponent<Ce_blogs> = ({
   result,
 }: CardProps<Ce_blogs>): JSX.Element => {
   const blog: Ce_blogs = result.rawData;
@@ -42,4 +42,4 @@ const BlogCard: CardComponent<Ce_blogs> = ({
   );
 };
 
-export default BlogCard;
+export default ArticleCard;

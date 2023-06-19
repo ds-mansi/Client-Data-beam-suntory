@@ -29,10 +29,10 @@ import Navigation from "../components/Navigation";
 
 // import Footer from "../components/Common/Footer";
 // import Header from "../components/Common/Header";
-import BlogCard from "../components/cards/BlogCard";
+import ArticleCard from "../components/cards/ArticleCard";
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return "blogs";
+  return "articles";
 };
 
 export const getHeadConfig: GetHeadConfig<
@@ -45,10 +45,10 @@ export const getHeadConfig: GetHeadConfig<
   };
 };
 
-answersHeadlessConfig.verticalKey = "article";
+answersHeadlessConfig.verticalKey = "articles";
 const searcher = provideHeadless(answersHeadlessConfig);
 
-const Blogs: Template<TemplateRenderProps> = () => {
+const Article: Template<TemplateRenderProps> = () => {
   return (
     <>
     {/* <Header props={document.document._site}/> */}
@@ -61,7 +61,7 @@ const Blogs: Template<TemplateRenderProps> = () => {
             <SpellCheck />
             <ResultsCount />
             <AppliedFilters hiddenFields={["builtin.entityType"]} />
-            <VerticalResults CardComponent={BlogCard}/>
+            <VerticalResults CardComponent={ArticleCard}/>
             <LocationBias />
           </div>
           <Pagination />
@@ -72,4 +72,4 @@ const Blogs: Template<TemplateRenderProps> = () => {
   );
 };
 
-export default Blogs;
+export default Article;
