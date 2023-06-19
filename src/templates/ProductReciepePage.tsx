@@ -46,7 +46,7 @@ export const getHeadConfig: GetHeadConfig<
   };
 };
 
-answersHeadlessConfig.verticalKey = "recipe";
+answersHeadlessConfig.verticalKey = "recipes";
 const searcher = provideHeadless(answersHeadlessConfig);
 
 const Product: Template<TemplateRenderProps> = (document) => {
