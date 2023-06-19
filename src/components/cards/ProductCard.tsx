@@ -6,18 +6,31 @@ const ProductCard: CardComponent<Product> = ({
   result,
 }: CardProps<Product>): JSX.Element => {
   const product: Product = result.rawData;
-
+  const PrimaryCTALabel = product.c_primaryCTA?.label
+    ? product?.c_primaryCTA?.label
+    : "";
+  const PrimaryCTALink = product.c_primaryCTA?.link
+    ? product?.c_primaryCTA?.link
+    : "#";
+  const SecondaryCTALabel = product.c_secondaryCTA?.label
+    ? product?.c_secondaryCTA?.label
+    : "";
+  const SecondaryCTALink = product.c_secondaryCTA?.link
+    ? product?.c_secondaryCTA?.link
+    : "#";
   return (
     <>
       <div className="">
-        {product.photoGallery?.map((img: {image:{url:string}},index:number) => {
-          return <img key={index} src={img.image.url} alt="" />;
-        })}
+        {product.photoGallery?.map(
+          (img: { image: { url: string } }, index: number) => {
+            return <img key={index} src={img.image.url} alt="" />;
+          }
+        )}
         <div>{product.name}</div>
 
-        <a href={product?.c_primaryCTA?.link}>{product?.c_primaryCTA?.label}</a>
+        <a href={PrimaryCTALink}>{PrimaryCTALabel}</a>
 
-        <a href={product?.c_secondaryCTA?.label}>{product?.c_secondaryCTA?.label}</a>
+        <a href={SecondaryCTALink}>{SecondaryCTALabel}</a>
       </div>
     </>
   );

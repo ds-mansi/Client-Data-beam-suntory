@@ -7,7 +7,6 @@ const FaqCard: CardComponent<Faq> = ({
   result,
 }: CardProps<Faq>): JSX.Element => {
   const faq: Faq = result.rawData;
- console.log(faq,"faq")
   return (
     <>
       <div className="faq-sec">

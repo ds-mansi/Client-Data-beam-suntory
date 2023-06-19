@@ -7,18 +7,21 @@ const ProductReciepeCard: CardComponent<Ce_productRecipes> = ({
   result,
 }: CardProps<Ce_productRecipes>): JSX.Element => {
   const productrecipe: Ce_productRecipes = result.rawData;
-
+  const recipeCTA = productrecipe?.c_primaryCTA?.label
+    ? productrecipe.c_primaryCTA.label
+    : "";
+  const recipeLink = productrecipe.c_primaryCTA.link
+    ? productrecipe?.c_primaryCTA?.link
+    : "#";
   return (
     <>
       <div className="">
-        {productrecipe?.photoGallery && productrecipe?.photoGallery?.map((img:Image)=>{
-          return(
-            <img src={img.image.url} alt="" />
-
-          )
-        })}
-          <div>{productrecipe.name}</div>
-        <a href={productrecipe?.c_primaryCTA?.link}>{productrecipe.c_primaryCTA?.label}</a>
+        {productrecipe?.photoGallery &&
+          productrecipe?.photoGallery?.map((img: Image) => {
+            return <img src={img.image.url} alt="" />;
+          })}
+        <div>{productrecipe.name && productrecipe?.name}</div>
+        <a href={recipeLink}>{recipeCTA}</a>
       </div>
     </>
   );
