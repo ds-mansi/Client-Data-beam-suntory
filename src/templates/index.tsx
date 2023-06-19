@@ -34,7 +34,7 @@ const universalResultsFilterConfig = {
   show: true,
 };
 export const getPath: GetPath<TemplateProps> = () => {
-  return "index";
+  return "index.html";
 };
 export const getHeadConfig: GetHeadConfig<
   TemplateRenderProps
