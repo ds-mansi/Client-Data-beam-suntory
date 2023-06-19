@@ -1,0 +1,16 @@
+{
+    "$id": "global-data",
+    "filter": {
+      "entityIds": ["global-data"] 
+    },
+    "source": "knowledgeGraph",
+    "fields": [
+      "name"
+   
+    ],
+    "localization": {
+      "locales": ["en_GB"],
+      "primary": false
+    }
+  }
+  
