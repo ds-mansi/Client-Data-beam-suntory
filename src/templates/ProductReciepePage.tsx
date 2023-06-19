@@ -33,7 +33,7 @@ import Facets from "../components/Facets";
 import ProductReciepeCard from "../components/cards/ProductReciepeCard";
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return "recipe";
+  return "recipes";
 };
 
 export const getHeadConfig: GetHeadConfig<
