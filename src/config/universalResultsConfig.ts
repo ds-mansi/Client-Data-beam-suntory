@@ -26,9 +26,9 @@ export const universalResultsConfig: UniversalResultsConfig = {
       showOrdinal: false,
     },
   },
-  recipe: {
+  recipes: {
     SectionComponent: StandardSection,
-    label: "Reciepes",
+    label: "Recipes",
     viewAllButton: true,
     cardConfig: {
       CardComponent: ProductReciepeCard,
