@@ -12,12 +12,12 @@ const FaqCard: CardComponent<Faq> = ({
       <div className="faq-sec">
         <div className="faq-blocks">
           <Accordion atomic={true}>
-            <AccordionItem className="faq-title" title={faq.question}>
+            <AccordionItem className="faq-title" title={faq?.question}>
               {" "}
               <span className="faq-icon"></span>
               <div className="faq-content new-accr">
-                <p>{faq.c_answerOption1}</p>
-                <p>{faq.c_answerOption1}</p>
+                <p>{faq?.c_answerOption1}</p>
+                <p>{faq?.c_answerOption1}</p>
               </div>
             </AccordionItem>
           </Accordion>

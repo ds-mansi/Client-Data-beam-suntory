@@ -17,18 +17,15 @@ import {
   DirectAnswer,
   AppliedFilters,
   LocationBias,
-  VerticalResults
 } from "@yext/search-ui-react";
-// import VerticalResults from "../components/VerticalResults";
 import {
   SearchHeadlessProvider,
   provideHeadless,
 } from "@yext/search-headless-react";
 import "../index.css";
 import Navigation from "../components/Navigation";
-// import Header from "../components/Common/Header";
-// import Footer from "../components/Common/Footer";
 import ProductCard from "../components/cards/ProductCard";
+import VerticalResults from "../components/VerticalResults";
 
 export const getPath: GetPath<TemplateProps> = () => {
   return "products";
@@ -47,7 +44,7 @@ export const getHeadConfig: GetHeadConfig<
 answersHeadlessConfig.verticalKey = "products";
 const searcher = provideHeadless(answersHeadlessConfig);
 
-const Product: Template<TemplateRenderProps> = (document) => {
+const Product: Template<TemplateRenderProps> = () => {
   return (
     <>
     {/* <Header props={document.document._site}/> */}

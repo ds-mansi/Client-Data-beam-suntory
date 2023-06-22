@@ -74,21 +74,20 @@ export default function Navigation({
 }: NavigationProps) {
   // Query - Starts
   const [navparmam, setNavParam] = useState("");
-  const SearchQuery: string | null = useSearchState((state) => state.query.input) ?? null;
+  const SearchQuery: string | null =
+    useSearchState((state) => state.query.input) ?? null;
   function getQueryParam(): string {
     const queryString: string | undefined = window.location.search;
     const urlParams: URLSearchParams = new URLSearchParams(queryString);
     const product: string | null = urlParams.get("query");
-  
+
     if (product !== null) {
       return product; // Return the non-null string
     } else {
       return ""; // Return a default value or handle the null case
     }
   }
-  
-  
-  
+
   // const product = urlParams.get('query');
   const answersActions = useSearchActions();
 
@@ -116,11 +115,13 @@ export default function Navigation({
     }
   }, [SearchQuery]);
 
-  function updateParam(latestUserInput: string):void {
+  function updateParam(latestUserInput: string): void {
     const paramValue = latestUserInput; // Replace with your updated value
-    const searchParams:URLSearchParams = new URLSearchParams(window.location.search);
+    const searchParams: URLSearchParams = new URLSearchParams(
+      window.location.search
+    );
     searchParams.set("query", paramValue);
-    const newUrl:string =
+    const newUrl: string =
       window.location.protocol +
       "//" +
       window.location.host +
@@ -129,8 +130,6 @@ export default function Navigation({
       searchParams.toString();
     window.history.replaceState({}, "", newUrl);
   }
-
-  
 
   //Query - Ends
 
@@ -225,7 +224,7 @@ export default function Navigation({
             ref={menuRef}
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <img className={cssClasses.kebabIcon} alt=""/> More
+            <img className={cssClasses.kebabIcon} alt="" /> More
           </button>
           {menuOpen && (
             <div className={cssClasses.menuContainer}>

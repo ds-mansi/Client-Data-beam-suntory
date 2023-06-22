@@ -27,8 +27,6 @@ import Navigation from "../components/Navigation";
 import UniversalResults from "../components/UniversalResults";
 import { universalResultsConfig } from "../config/universalResultsConfig";
 import { answersHeadlessConfig } from "../config/answersHeadlessConfig";
-// import Header from "../components/Common/Header";
-// import Footer from "../components/Common/Footer";
 
 const universalResultsFilterConfig = {
   show: true,

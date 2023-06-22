@@ -65,16 +65,16 @@ export function VerticalResultsDisplay(
         results.map((i) => {
           return (
             <>
-            <div>
-              {i.entityType === "faq" ? (
-                <div className={resultsClassNames}>
-                  {renderResult(CardComponent, cardConfig, i)}
-                </div>
-              ) : (
-                <div className={resultsClassNames}>
-                  {renderResult(CardComponent, cardConfig, i)}
-                </div>
-              )}
+              <div>
+                {i.entityType === "faq" ? (
+                  <div className={resultsClassNames}>
+                    {renderResult(CardComponent, cardConfig, i)}
+                  </div>
+                ) : (
+                  <div className={resultsClassNames}>
+                    {renderResult(CardComponent, cardConfig, i)}
+                  </div>
+                )}
               </div>
             </>
           );
@@ -142,13 +142,12 @@ export default function VerticalResults(
       (state) => state.vertical?.noResults?.allResultsForVertical.resultsCount
     ) || 0;
   const isLoading = useSearchState((state) => state.searchStatus.isLoading);
-  const aleternateVerticals = useSearchState(
-    (state) => state.vertical.noResults?.alternativeVerticals
-  );
 
   let results = verticalResults;
   let resultsCount = verticalResultsCount;
-
+  const aleternateVerticals = useSearchState(
+    (state) => state.vertical.noResults?.alternativeVerticals
+  );
 
   if (verticalResults.length === 0 && displayAllOnNoResults) {
     results = allResultsForVertical;
@@ -156,13 +155,12 @@ export default function VerticalResults(
 
     const filterVariable =
       aleternateVerticals?.filter(
-        (filtredResulta) => filtredResulta.resultsCount > 0
+        (filtredResults) => filtredResults.resultsCount > 0
       ) || [];
-      
-      const alternateVerticals =
+
+    const alternateVerticals =
       filterVariable.length > 0
         ? filterVariable.map((results: any) => {
-          
             return (
               <>
                 <a href={`/${results.verticalKey}`}>

@@ -11,14 +11,12 @@ import { answersHeadlessConfig } from "../config/answersHeadlessConfig";
 import "../index.css";
 import {
   SearchBar,
-  StandardCard,
   SpellCheck,
   ResultsCount,
   Pagination,
   DirectAnswer,
   AppliedFilters,
   LocationBias,
-  VerticalResults
 } from "@yext/search-ui-react";
 
 import {
@@ -27,10 +25,8 @@ import {
 } from "@yext/search-headless-react";
 import "../index.css";
 import Navigation from "../components/Navigation";
-import Facets from "../components/Facets";
-// import Header from "../components/Common/Header";
-// import Footer from "../components/Common/Footer";
 import ProductReciepeCard from "../components/cards/ProductReciepeCard";
+import VerticalResults from "../components/VerticalResults";
 
 export const getPath: GetPath<TemplateProps> = () => {
   return "recipes";

@@ -23,14 +23,14 @@
   "dependencies": {
     "@css-modules-theme/core": "^2.3.0",
     "@types/node": "^20.2.5",
-    "@yext/answers-headless-react": "^1.2.0",
     "@yext/answers-search-ui": "^1.15.1",
     "@yext/rtf-converter": "^1.7.1",
-    "@yext/search-headless": "^2.3.0",
+    "@yext/search-headless-react": "^2.2.0",
     "@yext/search-ui-react": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-light-accordion": "^0.1.4",
+    "remove-node-modules": "^1.7.6",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

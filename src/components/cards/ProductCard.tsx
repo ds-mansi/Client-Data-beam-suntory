@@ -23,10 +23,10 @@ const ProductCard: CardComponent<Product> = ({
       <div className="">
         {product.photoGallery?.map(
           (img: { image: { url: string } }, index: number) => {
-            return <img key={index} src={img.image.url} alt="" />;
+            return <img key={index} src={img?.image?.url} alt="" />;
           }
         )}
-        <div>{product.name}</div>
+        <div>{product?.name}</div>
 
         <a href={PrimaryCTALink}>{PrimaryCTALabel}</a>
 

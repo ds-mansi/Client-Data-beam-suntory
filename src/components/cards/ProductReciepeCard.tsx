@@ -18,7 +18,7 @@ const ProductReciepeCard: CardComponent<Ce_productRecipes> = ({
       <div className="">
         {productrecipe?.photoGallery &&
           productrecipe?.photoGallery?.map((img: Image) => {
-            return <img src={img.image.url} alt="" />;
+            return <img key="" src={img.image.url} alt="" />;
           })}
         <div>{productrecipe.name && productrecipe?.name}</div>
         <a href={recipeLink}>{recipeCTA}</a>

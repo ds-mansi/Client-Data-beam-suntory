@@ -17,7 +17,6 @@ import {
   DirectAnswer,
   AppliedFilters,
   LocationBias,
-  VerticalResults
 } from "@yext/search-ui-react";
 
 import {
@@ -26,10 +25,8 @@ import {
 } from "@yext/search-headless-react";
 import "../index.css";
 import Navigation from "../components/Navigation";
-
-// import Footer from "../components/Common/Footer";
-// import Header from "../components/Common/Header";
 import ArticleCard from "../components/cards/ArticleCard";
+import VerticalResults from "../components/VerticalResults";
 
 export const getPath: GetPath<TemplateProps> = () => {
   return "articles";
@@ -51,7 +48,7 @@ const searcher = provideHeadless(answersHeadlessConfig);
 const Article: Template<TemplateRenderProps> = () => {
   return (
     <>
-    {/* <Header props={document.document._site}/> */}
+      {/* <Header props={document.document._site}/> */}
       <SearchHeadlessProvider searcher={searcher}>
         <div className="px-4 py-8">
           <div className="mx-auto flex max-w-5xl flex-col">
@@ -61,7 +58,7 @@ const Article: Template<TemplateRenderProps> = () => {
             <SpellCheck />
             <ResultsCount />
             <AppliedFilters hiddenFields={["builtin.entityType"]} />
-            <VerticalResults CardComponent={ArticleCard}/>
+            <VerticalResults CardComponent={ArticleCard} />
             <LocationBias />
           </div>
           <Pagination />
