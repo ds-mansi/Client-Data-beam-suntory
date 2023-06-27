@@ -19,7 +19,7 @@ export const universalResultsConfig: UniversalResultsConfig = {
   },
   articles: {
     SectionComponent: StandardSection,
-    label: "Article",
+    label: "Blogs",
     viewAllButton: true,
     cardConfig: {
       CardComponent: ArticleCard,

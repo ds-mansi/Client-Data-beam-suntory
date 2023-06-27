@@ -47,7 +47,7 @@ const searcher = provideHeadless(answersHeadlessConfig);
 const Product: Template<TemplateRenderProps> = () => {
   return (
     <>
-    {/* <Header props={document.document._site}/> */}
+      {/* <Header props={document.document._site}/> */}
       <SearchHeadlessProvider searcher={searcher}>
         <div className="px-4 py-8">
           <div className="mx-auto flex max-w-5xl flex-col">

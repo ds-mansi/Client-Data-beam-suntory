@@ -20,7 +20,6 @@ const ArticleCard: CardComponent<Ce_blogs> = ({
             : "",
         }}
       ></div>
-
       <div
         className="blogs-card"
         dangerouslySetInnerHTML={{

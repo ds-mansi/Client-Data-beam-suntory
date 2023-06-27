@@ -17,7 +17,7 @@ const FaqCard: CardComponent<Faq> = ({
               <span className="faq-icon"></span>
               <div className="faq-content new-accr">
                 <p>{faq?.c_answerOption1}</p>
-                <p>{faq?.c_answerOption1}</p>
+                <p>{faq?.c_answerOption2}</p>
               </div>
             </AccordionItem>
           </Accordion>

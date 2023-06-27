@@ -20,10 +20,17 @@ const ProductCard: CardComponent<Product> = ({
     : "#";
   return (
     <>
-      <div className="">
+      <div className="productCard">
         {product.photoGallery?.map(
           (img: { image: { url: string } }, index: number) => {
-            return <img key={index} src={img?.image?.url} alt="" />;
+            return (
+              <img
+                key={index}
+                src={img?.image?.url}
+                alt=""
+                style={{ height: "50%" }}
+              />
+            );
           }
         )}
         <div>{product?.name}</div>

@@ -6,7 +6,6 @@
     "source": "knowledgeGraph",
     "fields": [
       "name"
-   
     ],
     "localization": {
       "locales": ["en_GB"],
